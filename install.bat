@@ -48,7 +48,7 @@ if %errorlevel% neq 0 (
 call "%CONDA_ROOT%\condabin\conda.bat" init
 call "%CONDA_ROOT%\condabin\conda.bat" config --set auto_activate_base false
 
-:: Create Conda environment if not exists
+:: create conda environment
 call "%CONDA_ROOT%\condabin\conda.bat" env list | findstr /R "\<neo-pentest\>" >NUL
 if %errorlevel% neq 0 (
     echo Creating Conda environment 'neo-pentest'...
